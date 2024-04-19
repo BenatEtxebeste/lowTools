@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <form>
+        <div class="imgcontainer">
+            <img src="imagenes/logo.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label for="email"><b>Email:</b></label>
+            <input id="inputEmail" type="email" placeholder="Introduce Email" name="email" required>
+
+            <label for="uname"><b>Usuario:</b></label>
+            <input id="inputNombre" type="text" placeholder="Introduce Usuario" name="uname" required>
+
+            <label for="psw"><b>Contraseña:</b></label>
+            <input id="inputContrasena" type="password" placeholder="Introduce Contraseña" name="psw" required>
+
+            <label for="c_psw"><b>Contraseña:</b></label>
+            <input id="inputConfContrasena" type="password" placeholder="Confirmar Contraseña" name="c_psw" required>
+
+            <button type="submit" onclick="SignIn(event)">Registrarse</button>
+            <div class="registercontainer">
+                <span class="register"><a href="index.html">Volver</a></span>
+            </div>
+        </div>
+</body>
+
+</html>

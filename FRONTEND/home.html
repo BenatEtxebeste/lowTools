@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        $(function () {
+            let token = localStorage.getItem('token') || ""
+            if (token == "" || token == '{"message":"Invalid credentials"}') {
+                window.location.assign("index.html")
+            }
+            $(document).tooltip();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="imagenes/logo.png" alt="">
+            </a>
+        </div>
+        <div class="nombre">
+            <a href="home.html">
+                <h1>Eguraldia</h1>
+            </a>
+        </div>
+        <div class="logout">
+            <a onclick="LogOut(event)">LOG OUT</a>
+        </div>
+    </header>
+    <section>
+        <div id="containerMapa">
+            <div id="mapa"></div>
+        </div>
+        <div class="opciones">
+            <img src="imagenes/precipitacion.png" id="precipitacion">
+            <img src="imagenes/viento.png" id="viento">
+            <img src="imagenes/compartimiento.png" id="basura">
+        </div>
+        <div id="carousel"></div>
+    </section>
+
+    <script src="js/mapa.js"></script>
+    <script src="js/cartas.js"></script>
+    <script src="js/prevision.js"></script>
+    <script src="js/grafico.js"></script>
+</body>
+
+</html>
