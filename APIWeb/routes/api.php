@@ -23,3 +23,5 @@ Route::post('login', [RegisterController::class, 'login']);
 Route::middleware('auth:api')->group(function () {  
     Route::get('logout', [RegisterController::class, 'logout']);
 });
+
+Route::get('getProductos', [ProductoController::class, 'index']);
