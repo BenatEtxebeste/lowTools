@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('idUsu');
             $table->integer('idProd');
+            $table->timestamps();
         });
     }
 

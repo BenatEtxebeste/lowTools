@@ -13,4 +13,12 @@ class ProductoController extends Controller
 
         return response()->json(['productos' => $productos]);
     }
+
+    public function indexByCategoria(String $categoria, String $name)
+    {
+        $productos = Producto::where('categoria', $categoria)
+                            ->where('name', $name)
+                            ->get();
+        return response()->json(['productos' => $productos]);
+    }
 }
