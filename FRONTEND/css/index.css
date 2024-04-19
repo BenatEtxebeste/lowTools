@@ -40,7 +40,7 @@ h2{
 
 h3{
     font-family: Genty;
-    font-size: 40px;
+    font-size: 50px;
     color: #5E17EB;
 }
 
@@ -85,8 +85,7 @@ li{
 
 /*HEADER*/
 header{
-    width: 100vw;
-    height: 80vh;
+    height: 55vh;
     background-color: rgb(209, 209, 209);
 }
 
