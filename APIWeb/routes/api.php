@@ -3,10 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\LugarHistoricoController;
-use App\Http\Controllers\LugarController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +16,6 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::get('select', [LugarController::class, 'index']);
 
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
