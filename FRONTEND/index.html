@@ -5,27 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="js/login.js"></script>
 </head>
 
 <body>
-    <form>
-        <div class="imgcontainer">
-            <img src="imagenes/logo.png" alt="Avatar" class="avatar">
+    <nav>
+        <div>
+            <ul>
+                <li>
+                    Categorías
+                </li>
+                <li>
+                    Explorar
+                </li>
+            </ul>
         </div>
-        <div class="container">
-            <label for="uname"><b>Usuario:</b></label>
-            <input id="inputNombre" type="text" placeholder="Introduce Usuario" name="uname" required>
-
-            <label for="psw"><b>Contraseña:</b></label>
-            <input id="inputContrasena" type="password" placeholder="Introduce Contraseña" name="psw" required>
-
-            <button type="submit" onclick="LogIn(event)">Login</button>
-            <div class="registercontainer">
-                <span class="register"><a href="register.html">Registrarse</a></span>
-            </div>
+        <div>
+            <img src="imagenes/prueba2.svg" alt="">
         </div>
+        <div>
+            <ul>
+                <li>
+                    Iniciar Sesión
+                </li>
+                <li>
+                    Registrarse
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+
+    </header>
+
+    <section id="seccion_productos_destacados">
+        <h1>Productos Destacados</h1>
+        <div>
+            <article>
+                <ul id="lista_articulos">
+                    <li id="articulo">
+                        <span class="material-symbols-outlined">
+                            extension
+                        </span>
+                        <p>Nombre Artículo 1</p>
+                    </li>
+                    <li id="articulo">
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+                        <p>Nombre Artículo 2</p>
+                    </li>
+                    <li id="articulo">
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+                        <p>Nombre Artículo 3</p>
+                    </li>
+                    <li id="articulo">
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+                        <p>Nombre Artículo 4</p>
+                    </li>
+                    <li id="articulo">
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+                        <p>Nombre Artículo 5</p>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <p>
+                    <img src="" alt="">
+                </p>
+            </article>
+            <article>
+                <h3>Descripcion</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non impedit magnam dolore voluptates, libero id molestiae, similique sint aperiam minus sit voluptas hic in, quasi obcaecati ducimus iusto totam?</p>
+                <div>
+                    <p>Valoraciones (56)</p>
+                    <p><img src="" alt="">Estrellas</p>
+                </div>
+                <button>Comprar</button>
+            </article>
+        </div>
+    </section>
 </body>
 
 </html>

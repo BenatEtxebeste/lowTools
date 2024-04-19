@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* COLORES:
+    - Negro: #222222
+    - Blanco Fondo: #FFF0F0
+    - Morado: #5E17EB
+    - Naranja: #FF9100
+    - Verde: #008D70 
+*/
+
+/*TIPOGRAFIAS*/
+@font-face {
+    font-family: Soliden;
+    src: url(../tipografias/soliden/SolidenTrial-BoldExpanded.ttf);
+}
+
+@font-face {
+    font-family: Montserrat Medium;
+    src: url(../tipografias/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Genty;
+    src: url(../tipografias/genty/GentyDemo-Regular.ttf);
+}
+
+
+/*TEXTOS*/
+h1{
+    font-family: Soliden;
+    font-size: 40px;
+}
+
+h2{
+
+}
+
+h3{
+    font-family: Genty;
+    font-size: 40px;
+    color: #5E17EB;
+}
+
+p{
+    font-family: Montserrat Medium;
+    font-size: 16px;
+}
+
+
+/*BODY*/
+body{
+    background-color: #FFF0F0;
+    color: #222222;
+    font-family: Montserrat Medium;
+    font-size: 16px;
+}
+
+
+/*NAV*/
+nav{
+    width: 100%;
+    padding: 20px 100px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div:nth-of-type(2) img{
+    width: 180px;
+}
+
+nav div:nth-of-type(3) ul, nav div:nth-of-type(1) ul{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+/*HEADER*/
+header{
+    width: 100vw;
+    height: 80vh;
+    background-color: rgb(209, 209, 209);
+}
+
+/*PRODUCTOS DESTACADOS*/
+#seccion_productos_destacados{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 80px;
+}
+
+#seccion_productos_destacados div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+#seccion_productos_destacados article:first-of-type{
+    width: 30%;
+}
+
+#seccion_productos_destacados article:nth-of-type(2){
+    width: 40%;
+}
+
+#seccion_productos_destacados article:nth-of-type(3){
+    width: 30%;
+}
+
+#lista_articulos{
+    padding: 0 !important;
+}
+
+#articulo{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 17px;
+    margin-bottom: 20px;
+}
+
+#articulo p{
+    margin-left: 15px;
+}
