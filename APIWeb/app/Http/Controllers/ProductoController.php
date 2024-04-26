@@ -41,12 +41,11 @@ class ProductoController extends Controller
 
         $producto = Producto::where('id', $id)->delete();
 
-        return response()->json(['productos', $producto]);
+        return "Producto con el id: " . $id . " borrado correctamente";
     }
 
     public function saveProducto(Request $request)
-    {
-
+    {   
         $id = $request->id;
         $nombre = $request->nombre;
         $precio = $request->precio;
@@ -64,6 +63,10 @@ class ProductoController extends Controller
             'categoria' => $categoria
         ]);
 
-        return "producto save ok";
+        if (isset($id)) {
+            return "Producto con el id: " . $id . " actualizado correctamente";
+        } else {
+            return "Producto insertado correctamente";
+        }
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PedidoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use App\Http\Controllers\ProductoController;
 |
 */
 
+//User
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 
@@ -32,3 +34,8 @@ Route::get('filtradoProductos', [ProductoController::class, 'indexByCategoria'])
 Route::post('deleteProducto', [ProductoController::class, 'deleteProducto']);
 
 Route::post('saveProducto', [ProductoController::class, 'saveProducto']);
+
+//Pedido
+Route::get('getPedidos', [PedidoController::class, 'getPedidos']);
+Route::get('getPedido', [PedidoController::class, 'getPedido']);
+Route::post('savePedido', [PedidoController::class, 'savePedido']);
