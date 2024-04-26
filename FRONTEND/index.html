@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="js/login.js"></script>
 </head>
 
@@ -27,11 +28,45 @@
         </div>
         <div>
             <ul>
-                <li>
-                    Iniciar Sesión
+                <li class="dropdown">
+                    <span class="material-symbols-outlined dropbtn nav-icon">
+                        language
+                        <div class="dropdown-content">
+                            <span class="caret"></span>
+
+                            <a href="">
+                                Español
+                            </a>
+                        </div>
+                    </span>
                 </li>
-                <li>
-                    Registrarse
+                <a href="Favoritos.html">
+                    <li class="dropdown">
+                        <span class="material-symbols-outlined dropbtn nav-icon">
+                            favorite
+                        </span>
+                    </li>
+                </a>
+                <a href="Carrito.html">
+                    <li class="dropdown">
+                        <span class="material-symbols-outlined dropbtn nav-icon">
+                            shopping_cart
+                        </span>
+                    </li>
+                </a>
+                <li class="dropdown">
+                    <span class="material-symbols-outlined dropbtn nav-icon">
+                        account_circle
+                        <div class="dropdown-content">
+                            <span class="caret"></span>
+                            <a href="Login.html">
+                                Iniciar Sesión
+                            </a>
+                            <a href="Register.html">
+                                Registrarse
+                            </a>
+                        </div>
+                    </span>
                 </li>
             </ul>
         </div>
@@ -85,7 +120,9 @@
             </article>
             <article>
                 <h3>Detalle</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non impedit magnam dolore voluptates, libero id molestiae, similique sint aperiam minus sit voluptas hic in, quasi obcaecati ducimus iusto totam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam non impedit magnam dolore
+                    voluptates, libero id molestiae, similique sint aperiam minus sit voluptas hic in, quasi obcaecati
+                    ducimus iusto totam?</p>
                 <div>
                     <p>Valoraciones (56)</p>
                     <p><img src="" alt="">Estrellas</p>
@@ -94,6 +131,57 @@
             </article>
         </div>
     </section>
+
+    <footer>
+        <ul>
+            <li>Logo</li>
+            <li>
+                <p>LowTools</p>
+                <ul>
+                    <li>Sobre nosotros</li>
+                    <li>Cómo funciona</li>
+                    <li>Información legal</li>
+                </ul>
+            </li>
+            <li>
+                <p>Compra</p>
+                <ul>
+                    <li>Productos</li>
+                    <li>Vendedores</li>
+                    <li>Cerca de ti</li>
+                </ul>
+            </li>
+            <li>
+                <p>Vende</p>
+                <ul>
+                    <li>Vender un producto</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <p>Ayuda</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                Condiciones de uso
+            </li>
+            <li>
+                Privacidad
+            </li>
+            <li>
+                Política de cookies
+            </li>
+        </ul>
+        <p>© 2024 LowTools</p>
+    </footer>
 </body>
 
 </html>

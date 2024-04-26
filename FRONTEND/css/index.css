@@ -29,29 +29,27 @@
 
 
 /*TEXTOS*/
-h1{
+h1 {
     font-family: Soliden;
     font-size: 40px;
 }
 
-h2{
+h2 {}
 
-}
-
-h3{
+h3 {
     font-family: Genty;
     font-size: 50px;
     color: #5E17EB;
 }
 
-p{
+p {
     font-family: Montserrat Medium;
     font-size: 16px;
 }
 
 
 /*BODY*/
-body{
+body {
     background-color: #FFF0F0;
     color: #222222;
     font-family: Montserrat Medium;
@@ -60,7 +58,7 @@ body{
 
 
 /*NAV*/
-nav{
+nav {
     width: 100%;
     padding: 20px 100px 20px 100px;
     display: flex;
@@ -68,57 +66,122 @@ nav{
     align-items: center;
 }
 
-nav div:nth-of-type(2) img{
+nav div:nth-of-type(2) img {
     width: 180px;
 }
 
-nav div:nth-of-type(3) ul, nav div:nth-of-type(1) ul{
+nav div:nth-of-type(3) ul,
+nav div:nth-of-type(1) ul {
     display: flex;
     justify-content: space-between;
     width: 250px;
 }
 
-li{
+li {
     list-style-type: none;
+    cursor: pointer; 
+}
+
+.nav-icon{
+    border-radius: 100%;
+    padding: 7px;
+}
+
+.nav-icon:hover{
+    background-color: #5E17EB;
+}
+
+
+/*DROPDOWN*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown button */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-top: 10px;
+    top: 100%;
+    left: 60%;
+    transform: translateX(-50%);
+    border: 3px solid #5E17EB;
+    border-radius: 15px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Montserrat Medium;
+    font-size: 16px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add a caret */
+.dropdown .caret {
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 5px);
+    background-color: #5E17EB;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
 }
 
 
 /*HEADER*/
-header{
+header {
     height: 55vh;
     background-color: rgb(209, 209, 209);
 }
 
 /*PRODUCTOS DESTACADOS*/
-#seccion_productos_destacados{
+#seccion_productos_destacados {
     padding-left: 150px;
     padding-right: 150px;
     margin-top: 80px;
 }
 
-#seccion_productos_destacados div{
+#seccion_productos_destacados div {
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
 }
 
-#seccion_productos_destacados article:first-of-type{
+#seccion_productos_destacados article:first-of-type {
     width: 30%;
 }
 
-#seccion_productos_destacados article:nth-of-type(2){
+#seccion_productos_destacados article:nth-of-type(2) {
     width: 40%;
 }
 
-#seccion_productos_destacados article:nth-of-type(3){
+#seccion_productos_destacados article:nth-of-type(3) {
     width: 30%;
 }
 
-#lista_articulos{
+#lista_articulos {
     padding: 0 !important;
 }
 
-#articulo{
+#articulo {
     width: 300px;
     display: flex;
     align-items: center;
@@ -128,6 +191,7 @@ header{
     margin-bottom: 20px;
 }
 
-#articulo p{
+#articulo p {
     margin-left: 15px;
 }
+
