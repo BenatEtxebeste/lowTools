@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducciones</title>
+</head>
+<body>
+    <!-- Botones para cambiar el idioma -->
+    <div>
+        <button onclick="cambiarIdioma('es')">Español</button>
+        <button onclick="cambiarIdioma('en')">Inglés</button>
+    </div>
+    <input id="inputEmail" type="email"  data-translate="titulo.bienvenido" placeholder="Introduce Email" name="email" required>
+
+    <div id="content">
+        <h1 data-translate="titulo.bienvenido"></h1>
+        <p data-translate="texto.ejemplo"></p>
+    </div>
+    <button data-translate="boton.ejemplo"></button>
+    
+    
+    <!-- Importar el script de traducciones -->
+    <script src="traducciones.js"></script>
+
+    
+</body>
+</html>

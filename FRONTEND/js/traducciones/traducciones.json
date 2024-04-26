@@ -1,0 +1,19 @@
+{
+    "titulo.bienvenido": {
+      "es": "Bienvenido",
+      "en": "Welcome"
+    },
+    "texto.ejemplo": {
+      "es": "Este es un ejemplo de página web en español.",
+      "en": "This is an example of a website in English."
+    },
+    "boton.ejemplo": {
+        "es": "Enviar",
+        "en": "send"
+    },
+    "categoria.ejemplo": {
+        "es": "madera",
+        "en": "wood"
+    }
+  }
+  
