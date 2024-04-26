@@ -31,4 +31,4 @@ Route::get('filtradoProductos', [ProductoController::class, 'indexByCategoria'])
 
 Route::post('deleteProducto', [ProductoController::class, 'deleteProducto']);
 
-Route::post('insertProducto', [ProductoController::class, 'insertProducto']);
+Route::post('saveProducto', [ProductoController::class, 'saveProducto']);

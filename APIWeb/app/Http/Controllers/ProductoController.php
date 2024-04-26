@@ -24,10 +24,13 @@ class ProductoController extends Controller
         return response()->json($producto);
     }
 
-    public function indexByCategoria(String $categoria, String $name)
+    public function indexByCategoria(Request $request)
     {
+        $categoria = $request->categoria;
+        $nombre = $request->nombre;
+
         $productos = Producto::where('categoria', $categoria)
-                            ->where('name', $name)
+                            ->where('nombre', $nombre)
                             ->get();
         return response()->json(['productos' => $productos]);
     }
@@ -41,17 +44,26 @@ class ProductoController extends Controller
         return response()->json(['productos', $producto]);
     }
 
-    public function insertProducto(Request $request)
+    public function saveProducto(Request $request)
     {
-        $producto = new Producto;
 
-        $producto->nombre = $request->nombre;
-        $producto->precio = $request->precio;
-        $producto->album = $request->album;
-        $producto->categoria = $request->categoria;
+        $id = $request->id;
+        $nombre = $request->nombre;
+        $precio = $request->precio;
+        $album = $request->album;
+        $categoria = $request->categoria;
 
-        $producto->save();
+        Producto::updateOrCreate(
+        [
+            'id' => $id
+        ],
+        [
+            'nombre' => $nombre,
+            'precio' => $precio,
+            'album' => $album,
+            'categoria' => $categoria
+        ]);
 
-        return redirect('/getProductos');
+        return "producto save ok";
     }
 }
