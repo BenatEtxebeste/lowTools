@@ -195,3 +195,44 @@ header {
     margin-left: 15px;
 }
 
+/*FOOTER*/
+footer{
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding: 70px 150px 70px 150px;
+    background-color: #222222;
+    color: white;
+    font-size: 14px;
+}
+
+.footer1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer1 li p{
+    font-family: Soliden;
+    font-size: 20px;
+}
+
+.footer1 li ul{
+    padding: 0;
+    margin: 0;
+}
+
+.footer1 li ul li{
+    margin-top: 20px;
+}
+
+
+.footer2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.creditos{
+    text-align: center;
+    margin-top: 60px;
+}
