@@ -23,6 +23,11 @@
 }
 
 @font-face {
+    font-family: Montserrat Light;
+    src: url(../tipografias/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
     font-family: Genty;
     src: url(../tipografias/genty/GentyDemo-Regular.ttf);
 }
@@ -31,7 +36,7 @@
 /*TEXTOS*/
 h1 {
     font-family: Soliden;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 h2 {}
@@ -50,7 +55,7 @@ p {
 
 /*BODY*/
 body {
-    background-color: #FFF0F0;
+    background-color: #fffaf0;
     color: #222222;
     font-family: Montserrat Medium;
     font-size: 16px;
@@ -79,15 +84,20 @@ nav div:nth-of-type(1) ul {
 
 li {
     list-style-type: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.nav-icon{
+nav div ul li:first-of-type:hover, li:nth-of-type(2):hover{
+    text-decoration: underline;
+    
+}
+
+.nav-icon {
     border-radius: 100%;
     padding: 7px;
 }
 
-.nav-icon:hover{
+.nav-icon:hover {
     background-color: #5E17EB;
 }
 
@@ -107,7 +117,7 @@ li {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding-top: 10px;
-    top: 100%;
+    top: 140%;
     left: 60%;
     transform: translateX(-50%);
     border: 3px solid #5E17EB;
@@ -156,7 +166,8 @@ header {
 #seccion_productos_destacados {
     padding-left: 150px;
     padding-right: 150px;
-    margin-top: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 #seccion_productos_destacados div {
@@ -196,43 +207,52 @@ header {
 }
 
 /*FOOTER*/
-footer{
+footer {
     width: 100%;
     padding-left: 150px;
     padding-right: 150px;
-    padding: 70px 150px 70px 150px;
+    padding: 100px 150px 100px 150px;
     background-color: #222222;
     color: white;
     font-size: 14px;
+    font-family: Montserrat Light;
 }
 
-.footer1{
+.footer1 {
     display: flex;
     justify-content: space-evenly;
 }
 
-.footer1 li p{
+.footer1 li h4 {
     font-family: Soliden;
     font-size: 20px;
+    margin-bottom: 30px;
 }
 
-.footer1 li ul{
+.footer1 li ul {
     padding: 0;
     margin: 0;
 }
 
-.footer1 li ul li{
+.footer1 li ul li {
     margin-top: 20px;
 }
 
+.footer1 li ul li:hover{
+    text-decoration: underline;
+}
 
-.footer2{
+.footer2 {
     display: flex;
     justify-content: space-evenly;
     margin-top: 100px;
 }
 
-.creditos{
+.footer2 li:hover{
+    text-decoration: underline;
+}
+
+.creditos {
     text-align: center;
     margin-top: 60px;
 }
