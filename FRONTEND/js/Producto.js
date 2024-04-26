@@ -2,8 +2,9 @@ const myHeaders = new Headers();
 myHeaders.append("Accept", "application/json");
 let url = (new URL(window.location.origin)).hostname;
 
-function insertarProcucto(nombre, precio, album, categoria) {
+function insertarProcucto(id,nombre, precio, album, categoria) {
     let formdata = new FormData();
+    formdata.append("id", '"' + id + '"');
     formdata.append("nombre", '"' + nombre + '"');
     formdata.append("precio", '"' + precio + '"');
     formdata.append("album", '"' + album + '"');
