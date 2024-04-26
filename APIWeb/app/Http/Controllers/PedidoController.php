@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Pedido;
 
 class PedidoController extends Controller
@@ -12,5 +11,12 @@ class PedidoController extends Controller
         $pedidos = Pedido::all();
 
         return response()->json(['pedidos' => $pedidos]);
+    }
+
+    public function getPedido(Int $id)
+    {
+        $pedido = Pedido::where('id', $id);
+
+        return response()->json(['pedido', $pedido]);
     }
 }

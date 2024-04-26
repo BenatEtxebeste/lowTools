@@ -26,7 +26,10 @@ class RegisterController extends BaseController
         ]);
      
         if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
+            return response()->json([
+                'message' => 'Validation Error.',
+                'errors' => $validator->errors()
+            ]);
         }
      
         $input = $request->all();
@@ -35,7 +38,10 @@ class RegisterController extends BaseController
         $success['token'] =  $user->createToken('MyApp')->accessToken;
         $success['name'] =  $user->name;
    
-        return $this->sendResponse($success, 'User register successfully.');
+        return response()->json([
+            'success' => $success,
+            'message' => 'Usuario registrado correctamente.'
+        ], 422);
     }
      
     /**
@@ -50,10 +56,14 @@ class RegisterController extends BaseController
             $success['token'] =  $user->createToken('MyApp')-> accessToken; 
             $success['name'] =  $user->name;
    
-            return $this->sendResponse($success, 'User login successfully.');
-        } 
+            return response()->json([
+                'success' => $success,
+                'message' => 'Usuario logeado correctamente.'
+            ]);        } 
         else{ 
-            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+            return response()->json([
+                'error' => 'Unauthorised'
+            ], 401);
         } 
     }
 

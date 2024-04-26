@@ -24,4 +24,11 @@ Route::middleware('auth:api')->group(function () {
     Route::get('logout', [RegisterController::class, 'logout']);
 });
 
-Route::get('getProductos', [ProductoController::class, 'index']);
+//Producto
+Route::get('index', [ProductoController::class, 'index']);
+Route::get('getProducto', [ProductoController::class, 'getProducto']);
+Route::get('filtradoProductos', [ProductoController::class, 'indexByCategoria']);
+
+Route::post('deleteProducto', [ProductoController::class, 'deleteProducto']);
+
+Route::post('insertProducto', [ProductoController::class, 'insertProducto']);
