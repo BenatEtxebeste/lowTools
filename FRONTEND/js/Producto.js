@@ -8,12 +8,12 @@ let url = "http://localhost"; //(new URL(window.location.origin)).hostname;
 async function insertarProcucto(id, nombre, precio, album, categoria) {
   let formdata = new FormData();
   if (!id == "") {
-    formdata.append("id", '"' + id + '"');
+    formdata.append("id",  id );
   }
-  formdata.append("nombre", '"' + nombre + '"');
-  formdata.append("precio", "" + precio + "");
-  formdata.append("album", '"' + album + '"');
-  formdata.append("categoria", '"' + categoria + '"');
+  formdata.append("nombre",  nombre );
+  formdata.append("precio",  precio );
+  formdata.append("album",  album );
+  formdata.append("categoria",  categoria );
   const requestOptions = {
     method: "POST",
     headers: myHeaders,
@@ -43,7 +43,7 @@ async function listProcuctos() {
 
 async function deleteProducto(id) {
   let formdata = new FormData();
-  formdata.append("id", '"' + id + '"');
+  formdata.append("id",  id );
 
   const requestOptions = {
     method: "POST",
@@ -77,42 +77,59 @@ async function getProcuctos(id) {
  CARDS
 */
 
-async function generarProductos(listaProcuctos) {
-  let productos = listaProcuctos["productos"];
-  // Genera las tarjetas HTML para cada producto
+async function generarProductos(listaProductos) {
+  let productos = listaProductos["productos"];
   const productosContainer = document.getElementById("productosContainer");
-  console.log(productos);
+  
   productos.forEach((producto) => {
-    console.log(producto);
     let card = document.createElement("div");
     card.classList.add("card");
-    // Crear imagen
+    
     var imagen = new Image();
     imagen.src = producto.album;
-    imagen.classList.add("producto-imagen"); // Agregar clase a la imagen
+    imagen.classList.add("producto-imagen");
 
-    // Crear título
     let titulo = document.createElement("h2");
     titulo.textContent = producto.nombre;
     titulo.classList.add("titulo");
 
-    // Crear precio
+    // Sistema de valoración con estrellas
+    let valoracion = document.createElement("div");
+    valoracion.classList.add("valoracion");
+    let valoracionTexto = document.createElement("span");
+    valoracionTexto.textContent = "";
+    valoracion.appendChild(valoracionTexto);
+    for (let i = 0; i < 5; i++) {
+      let estrella = document.createElement("span");
+      estrella.textContent = "★";
+      valoracion.appendChild(estrella);
+    }
+
     let precio = document.createElement("p");
     precio.textContent = "Precio: " + producto.precio;
     precio.classList.add("precio");
 
-    // Crear categoría
     let categoria = document.createElement("p");
     categoria.textContent = "Categoría: " + producto.categoria;
     categoria.classList.add("categoria");
 
-    // Agregar elementos a la tarjeta
+    let alcarrito = document.createElement("button");
+    alcarrito.textContent = "Pedir";
+    alcarrito.classList.add("pedir");
+    alcarrito.setAttribute("onclick","pedir("+producto.id+")");
+
     card.appendChild(imagen);
     card.appendChild(titulo);
+    card.appendChild(valoracion);
     card.appendChild(precio);
     card.appendChild(categoria);
+    card.appendChild(alcarrito);
+    
+    // Verificar si el título es demasiado grande
+    if (titulo.offsetWidth > card.offsetWidth) {
+      titulo.classList.add("animar-texto");
+    }
 
-    // Agregar tarjeta al contenedor de productos
     productosContainer.appendChild(card);
   });
 }
@@ -120,3 +137,5 @@ async function generarProductos(listaProcuctos) {
 window.onload = function () {
   listProcuctos();
 };
+
+//for (let index = 0; index < 10; index++) {insertarProcucto("", "nombre del producto de referencia"+index, (Math.sin(index)*10)+10, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_rW9Y5TfUq1duUy3j4mvfVF5kJYUh3_0opA&s", "categoria")}
