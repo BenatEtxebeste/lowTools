@@ -8,52 +8,66 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="js/login.js"></script>
 </head>
 
 <body>
+    <div class="barra_superior">
+        <ul>
+            <li>Sobre nosotros</li>
+            <li class="descuentos animate__animated animate__headShake">DESCUENTOS DE TEMPORADA HASTA EL 50% -
+                <span>COMPRAR AHORA</span>
+            </li>
+            <li>Contacto</li>
+        </ul>
+    </div>
     <nav>
-        <div>
-            <ul>
-                <li class="dropdown">
-                    Categorías
-                    <div class="dropdown-content">
-                        <span class="caret"></span>
-                        <a href="">
-                            Muebles
-                        </a>
-                        <a href="">
-                            Juguetes
-                        </a>
-                        <a href="">
-                            Joyas
-                        </a>
-                        <a href="">
-                            Textiles
-                        </a>
-                        <a href="">
-                            Cerámica
-                        </a>
-                        <a href="">
-                            Cuero y marroquinería
-                        </a>
-                        <a href="">
-                            Vidrios y metales
-                        </a>
-                        <a href="">
-                            Cosméticos naturales
-                        </a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    Explorar
-                </li>
-            </ul>
+        <div class="nav_primera_parte">
+            <a href="index.html"><img src="imagenes/logo-recortado-sombreado.png" alt=""></a>
+            <div>
+                <ul>
+                    <li class="dropdown">
+                        Categorías
+                        <div class="dropdown-content">
+                            <span class="caret"></span>
+                            <a href="">
+                                Muebles
+                            </a>
+                            <a href="">
+                                Juguetes
+                            </a>
+                            <a href="">
+                                Joyas
+                            </a>
+                            <a href="">
+                                Textiles
+                            </a>
+                            <a href="">
+                                Cerámica
+                            </a>
+                            <a href="">
+                                Cuero y marroquinería
+                            </a>
+                            <a href="">
+                                Vidrios y metales
+                            </a>
+                            <a href="">
+                                Cosméticos naturales
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        Explorar
+                    </li>
+                    <li>
+                        Tiendas cerca de ti
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <img src="imagenes/prueba2.svg" alt="">
-        </div>
-        <div>
+
+        <div class="nav_segunda_parte">
             <ul>
                 <li class="dropdown">
                     <span class="material-symbols-outlined dropbtn nav-icon">
@@ -100,8 +114,65 @@
     </nav>
 
     <header>
-
+        <div>
+            <h1>Cada pieza cuenta una historia.</h1>
+        </div>
     </header>
+
+    <section id="seccion_cards_header">
+        <div class="card_header"> <!--1-->
+            <article>
+                <div>
+                    <span class="material-symbols-outlined">
+                        interests
+                    </span>
+                    <h4 class="titulo_card">Celebra la originalidad</h4>
+                </div>
+                <p>En un mundo dominado por la producción en masa, a menudo se pasa por alto la verdadera belleza del trabajo hecho a mano.</p>
+            </article>
+        </div>
+        <div class="card_header"> <!--2-->
+            <article>
+                <div>
+                    <span class="material-symbols-outlined">
+                        link
+                    </span>
+                    <h4 class="titulo_card">Conexión directa</h4>
+                </div>
+                <p>Conectamos directamente a los creadores con una audiencia que valora la autenticidad, la calidad y la originalidad.</p>
+            </article>
+        </div>
+        <div class="card_header"> <!--3-->
+            <article>
+                <div>
+                    <span class="material-symbols-outlined">
+                        travel_explore
+                        </span>
+                    <h4 class="titulo_card">Encuentra un artesano</h4>
+                </div>
+                <p>Los artesanos tendrán la capacidad de especificar dónde y cuándo estarán disponibles sus productos. ¿Venderás en un festival local este verano?</p>
+            </article>
+        </div>
+        <div class="card_header"> <!--4-->
+            <article>
+                <div>
+                    <span class="material-symbols-outlined">
+                        interests
+                    </span>
+                    <h4 class="titulo_card">Celebra la originalidad</h4>
+                </div>
+                <p>Conectamos a los creadores con una audiencia que valora la autenticidad, la calidad y la
+                    originalidad. Juntos celebramos el trabajo artesanal.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="seccion_categorias">
+        <div class="card_categoria">
+            <img class="icono_categoria" src="imagenes/sillon.svg">
+            <p class="nombre_categoria">Muebles</p>
+        </div>
+    </section>
 
     <section id="seccion_productos_destacados">
         <h1>Productos Destacados</h1>
@@ -196,21 +267,24 @@
             </li>
         </ul>
 
-        <ul class="footer2">
-            <li>
-                Condiciones de uso
-            </li>
-            <li>
-                Privacidad
-            </li>
-            <li>
-                Política de cookies
-            </li>
-            <li>
-                Aviso legal
-            </li>
-        </ul>
-        <p class="creditos">© 2024 LowTools</p>
+        <div>
+            <ul class="footer2">
+                <li>
+                    Condiciones de uso
+                </li>
+                <li>
+                    Privacidad
+                </li>
+                <li>
+                    Política de cookies
+                </li>
+                <li>
+                    Aviso legal
+                </li>
+            </ul>
+            <p class="creditos">© 2024 LowTools</p>
+        </div>
+
     </footer>
 </body>
 

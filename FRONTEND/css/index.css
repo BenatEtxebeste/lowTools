@@ -28,8 +28,18 @@
 }
 
 @font-face {
+    font-family: Montserrat Bold;
+    src: url(../tipografias/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
     font-family: Genty;
     src: url(../tipografias/genty/GentyDemo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shrikhand;
+    src: url(../tipografias/Shrikhand/Shrikhand-Regular.ttf);
 }
 
 
@@ -47,6 +57,12 @@ h3 {
     color: #5E17EB;
 }
 
+h4 {
+    /* font-family: Montserrat Medium; */
+    font-family: Montserrat Bold;
+    font-size: 20px;
+}
+
 p {
     font-family: Montserrat Medium;
     font-size: 16px;
@@ -62,6 +78,39 @@ body {
 }
 
 
+/*BARRA SUPERIOR*/
+.barra_superior {
+    width: 100%;
+    background-color: rgb(255, 243, 226);
+    font-size: 14px;
+    font-family: Montserrat Medium;
+    color: #FF9100;
+    padding: 5px;
+}
+
+.barra_superior ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.descuentos {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: animate__headShake 2s ease-in-out infinite;
+}
+
+.descuentos span {
+    font-family: Montserrat Bold;
+}
+
+.descuentos span:hover {
+    text-decoration: underline;
+}
+
+
+
 /*NAV*/
 nav {
     width: 100%;
@@ -69,17 +118,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #FF9100;
+    padding-left: 140px;
+    padding-right: 135px;
 }
 
-nav div:nth-of-type(2) img {
-    width: 180px;
+nav div:nth-of-type(1) img {
+    width: 220px;
 }
 
-nav div:nth-of-type(3) ul,
+/* nav div:nth-of-type(2) {
+    width: 500px;
+} */
+
+/* nav div:nth-of-type(3) ul,
 nav div:nth-of-type(1) ul {
     display: flex;
     justify-content: space-between;
     width: 250px;
+} */
+
+.nav_primera_parte {
+    display: flex;
+    align-items: center;
 }
 
 li {
@@ -87,18 +148,46 @@ li {
     cursor: pointer;
 }
 
-nav div ul li:first-of-type:hover, li:nth-of-type(2):hover{
+.nav_primera_parte a {
+    margin-right: 40px;
+}
+
+.nav_primera_parte div ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav_primera_parte div ul li {
+    margin-right: 40px;
+    font-family: Montserrat Bold;
+    color: #FF9100;
+    background-image: url();
+}
+
+.nav_primera_parte div ul li:hover {
+    text-shadow: 0 0 20px #ffb937;
+}
+
+/* nav div ul li:first-of-type:hover, nav div ul li:nth-of-type(2):hover{
     text-decoration: underline;
-    
+} */
+
+.nav_segunda_parte ul {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-icon {
     border-radius: 100%;
     padding: 7px;
+    color: #5E17EB;
 }
 
 .nav-icon:hover {
-    background-color: #5E17EB;
+    /* background-color: #ffb937; */
+    /* box-shadow: 0 0 20px #ffb937; */
+    background: -gradient(#ffb937a1, #ffb93700);
 }
 
 
@@ -117,10 +206,11 @@ nav div ul li:first-of-type:hover, li:nth-of-type(2):hover{
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding-top: 10px;
-    top: 140%;
+    top: 120%;
     left: 60%;
     transform: translateX(-50%);
-    border: 3px solid #5E17EB;
+    border: 1px solid #5E17EB;
+    box-shadow: 0 0 10px #9b6aff;
     border-radius: 15px;
 }
 
@@ -134,9 +224,16 @@ nav div ul li:first-of-type:hover, li:nth-of-type(2):hover{
     font-size: 16px;
 }
 
+.dropdown-content a {
+    text-shadow: none !important;
+}
+
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    /* background-color: #8b5e5e; */
+    /* border-radius: 10px; */
+    text-shadow: 0 0 30px #ffa600 !important;
 }
 
 /* Show the dropdown menu on hover */
@@ -160,7 +257,102 @@ nav div ul li:first-of-type:hover, li:nth-of-type(2):hover{
 header {
     height: 55vh;
     background-color: rgb(209, 209, 209);
+    background-image: url(../imagenes/fondo-header2.jpg);
+    background-size: cover;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;
 }
+
+header div {
+    width: 60%;
+}
+
+header div h1 {
+    font-size: 5em;
+}
+
+/*HEADER CARDS*/
+#seccion_cards_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: #9b6aff; */
+    background-color: #5E17EB;
+    padding-bottom: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.card_header {
+    width: 400px;
+    background-color: #FFF0F0;
+    padding: 30px;
+    /* border-radius: 10px; */
+    margin-top: -40px;
+    box-shadow: 0 0 30px #5E17EB;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.card_header:hover{
+    margin-top: -70px;
+    box-shadow: 0 0 30px #FF9100;
+}
+
+
+.card_header article div {
+    display: flex;
+    align-items: center;
+}
+
+.card_header article div span{
+    /* width: 20%; */
+    font-size: 35px;
+    margin-right: 10px;
+    color: #FF9100;
+}
+
+.card_header article p{
+    margin-top: 15px;
+}
+
+.titulo_card{
+    color: #5E17EB;
+}
+
+/*SECCION CATEGORIAS*/
+#seccion_categorias{
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #5E17EB;
+    padding-bottom: 100px;
+}
+
+#seccion_categorias div{
+    width: 15%;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#seccion_categorias div img{
+    filter: invert(100%);
+    width: 70%;
+}
+
+#seccion_categorias div p{
+    margin-top: -20px;
+    font-family: Shrikhand !important;
+}
+
 
 /*PRODUCTOS DESTACADOS*/
 #seccion_productos_destacados {
@@ -209,10 +401,8 @@ header {
 /*FOOTER*/
 footer {
     width: 100%;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding: 100px 150px 100px 150px;
-    background-color: #222222;
+    padding-top: 100px;
+    background-color: #5E17EB;
     color: white;
     font-size: 14px;
     font-family: Montserrat Light;
@@ -221,6 +411,8 @@ footer {
 .footer1 {
     display: flex;
     justify-content: space-evenly;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .footer1 li h4 {
@@ -238,17 +430,26 @@ footer {
     margin-top: 20px;
 }
 
-.footer1 li ul li:hover{
+.footer1 li ul li:hover {
     text-decoration: underline;
+}
+
+footer div {
+    background-color: #222222;
+    padding-bottom: 50px;
+
 }
 
 .footer2 {
     display: flex;
     justify-content: space-evenly;
     margin-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
 }
 
-.footer2 li:hover{
+.footer2 li:hover {
     text-decoration: underline;
 }
 
