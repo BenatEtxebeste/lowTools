@@ -350,7 +350,8 @@ header div h1 {
 
 #seccion_categorias div p{
     margin-top: -20px;
-    font-family: Shrikhand !important;
+    font-family: Shrikhand;
+    font-size: 25px;
 }
 
 

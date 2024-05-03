@@ -3,7 +3,7 @@
 */
 const myHeaders = new Headers();
 myHeaders.append("Accept", "application/json");
-let url = "http://localhost"; //(new URL(window.location.origin)).hostname;
+let url = (new URL(window.location.origin)).hostname;
 
 async function insertarProcucto(id, nombre, precio, album, categoria) {
   let formdata = new FormData();
@@ -138,4 +138,4 @@ window.onload = function () {
   listProcuctos();
 };
 
-//for (let index = 0; index < 10; index++) {insertarProcucto("", "nombre del producto de referencia"+index, (Math.sin(index)*10)+10, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_rW9Y5TfUq1duUy3j4mvfVF5kJYUh3_0opA&s", "categoria")}
+for (let index = 0; index < 10; index++) {insertarProcucto("", "nombre del producto de referencia"+index, (Math.sin(index)*10)+10, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_rW9Y5TfUq1duUy3j4mvfVF5kJYUh3_0opA&s", "categoria")}
