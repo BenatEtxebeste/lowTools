@@ -106,17 +106,17 @@ async function generarProductos(listaProductos) {
     }
 
     let precio = document.createElement("p");
-    precio.textContent = "Precio: " + producto.precio;
+    precio.textContent =  producto.precio+'€';
     precio.classList.add("precio");
 
     let categoria = document.createElement("p");
-    categoria.textContent = "Categoría: " + producto.categoria;
+    categoria.textContent = producto.categoria;
     categoria.classList.add("categoria");
 
     let alcarrito = document.createElement("button");
-    alcarrito.textContent = "Pedir";
+    alcarrito.textContent = "Comprar";
     alcarrito.classList.add("pedir");
-    alcarrito.setAttribute("onclick", "pedir(" + producto.id + ")");
+    alcarrito.setAttribute("onclick","pedir("+producto.id+")");
 
     card.appendChild(imagen);
     card.appendChild(titulo);
@@ -124,14 +124,16 @@ async function generarProductos(listaProductos) {
     card.appendChild(precio);
     card.appendChild(categoria);
     card.appendChild(alcarrito);
-
+    
     // Verificar si el título es demasiado grande
-    if (titulo.offsetWidth > card.offsetWidth) {
-      titulo.classList.add("animar-texto");
-    }
+    // if (titulo.offsetWidth > card.offsetWidth) {
+    //   titulo.classList.add("animar-texto");
+    // }
 
     productosContainer.appendChild(card);
   });
+    console.log(productosContainer)
+
 }
 
 listProcuctos();
