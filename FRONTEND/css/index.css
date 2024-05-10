@@ -399,12 +399,12 @@ header div h1 {
 }
 
 #seccion_productos_destacados div {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 80px; */
 }
 
-#seccion_productos_destacados article:first-of-type {
+/* #seccion_productos_destacados article:first-of-type {
     width: 30%;
 }
 
@@ -432,11 +432,11 @@ header div h1 {
 
 #articulo p {
     margin-left: 15px;
-}
+} */
 
 /*FOOTER*/
 footer {
-    width: 100%;
+    width: 100vw !important;
     padding-top: 100px;
     /* background-color: #5E17EB; */
     border-top: 1px solid #FF9100;
