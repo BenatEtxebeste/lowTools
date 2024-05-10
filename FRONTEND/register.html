@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="css/login.css">
-    <script src="js/login.js"></script>
+    <script src="ip.js"></script>
 </head>
-
 <body>
-    <form>
-        <div class="imgcontainer">
-            <img src="imagenes/logo.png" alt="Avatar" class="avatar">
-        </div>
-        <div class="container">
-            <label for="email"><b>Email:</b></label>
-            <input id="inputEmail" type="email" placeholder="Introduce Email" name="email" required>
-
-            <label for="uname"><b>Usuario:</b></label>
-            <input id="inputNombre" type="text" placeholder="Introduce Usuario" name="uname" required>
-
-            <label for="psw"><b>Contraseña:</b></label>
-            <input id="inputContrasena" type="password" placeholder="Introduce Contraseña" name="psw" required>
-
-            <label for="c_psw"><b>Contraseña:</b></label>
-            <input id="inputConfContrasena" type="password" placeholder="Confirmar Contraseña" name="c_psw" required>
-
-            <button type="submit" onclick="SignIn(event)">Registrarse</button>
-            <div class="registercontainer">
-                <span class="register"><a href="index.html">Volver</a></span>
+    <section id="contenido">
+        <article id="form-login">
+            <div style="display: flex; justify-content: center;">
+                <img src="imagenes/logo.png" alt="" width="160px">
             </div>
-        </div>
+            <h2>Registrarse</h2>
+            <form action="" method="post">
+                <label for="email">Nombre</label>
+                <input type="nombre" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="submit" value="Registrarse" id="submit">
+                <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a>.</p>
+            </form>
+        </article>
+    </section>
+    
+    <script src="register.js"></script>
 </body>
-
-</html>

@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* COLORES:
+    - Negro: #222222
+    - Blanco Fondo: #FFF0F0
+    - Morado: #5E17EB
+    - Naranja: #FF9100
+    - Verde: #008D70 
+*/
+
+/*TIPOGRAFIAS*/
+@font-face {
+    font-family: Soliden;
+    src: url(../tipografias/soliden/SolidenTrial-BoldExpanded.ttf);
+}
+
+@font-face {
+    font-family: Montserrat Medium;
+    src: url(../tipografias/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat Light;
+    src: url(../tipografias/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Montserrat Bold;
+    src: url(../tipografias/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Genty;
+    src: url(../tipografias/genty/GentyDemo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Shrikhand;
+    src: url(../tipografias/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+
+/*TEXTOS*/
+h1 {
+    font-family: Soliden;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: Soliden;
+
+}
+
+h3 {
+    font-family: Genty;
+    font-size: 50px;
+    color: #5E17EB;
+}
+
+h4 {
+    /* font-family: Montserrat Medium; */
+    font-family: Montserrat Bold;
+    font-size: 20px;
+}
+
+p {
+    font-family: Montserrat Medium;
+    font-size: 16px;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imagenes/fondo-login.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat Medium;
+    font-size: 16px;
+}
+
+form{
+    /* text-align: center; */
+    display: block;
+}
+
+
+/**/
+/*FORM*/
+#form-login {
+    backdrop-filter: blur(20deg);
+    padding: 50px 50px 70px 50px;
+    border-radius: 20px;
+    width: 500px;
+    /* box-shadow: 0px 0px 10px #5E17EB */
+    /* border: 1px solid #FF9100; */
+
+}
+
+#form-login h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+label {
+    /* font-family: 'Inter', sans-serif; */
+    font-size: 1em;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    /* border-radius: 12px; */
+    border: 1px solid lightgray;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+input:first-of-type,
+input:nth-of-type(2) {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+input:placeholder-shown {
+    padding-left: 10px;
+}
+
+input#submit {
+    background-color: #5E17EB;
+    color: white;
+    font-family: Montserrat Medium;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+input#submit:hover {
+    background-color: #7a37ff;
+    transition: ease-in-out 0.2s;
+}
+
+#form-login p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#form-login p a {
+    color: #FF9100;
+}
