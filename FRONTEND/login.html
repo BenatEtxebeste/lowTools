@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/login.css">
-    <script src="ip.js"></script>
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <section id="contenido">
@@ -15,15 +16,13 @@
             </div>
             <h2>Iniciar sesión</h2>
             <form action="" method="post">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="E-mail">
+                <label for="username">Usuario</label>
+                <input type="text" name="username" id="username" placeholder="Nombre de usuario">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña">
-                <input type="submit" value="Iniciar Sesión" id="submit">
+                <input type="submit" value="Iniciar Sesión" id="submit" onclick="LogIn(event)">
                 <p>¿No tienes una cuenta? <a href="register.html">Registrarse</a>.</p>
             </form>
         </article>
     </section>
-    
-    <script src="register.js"></script>
 </body>

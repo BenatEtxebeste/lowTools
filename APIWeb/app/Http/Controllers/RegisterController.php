@@ -41,7 +41,7 @@ class RegisterController extends BaseController
         return response()->json([
             'success' => $success,
             'message' => 'Usuario registrado correctamente.'
-        ], 422);
+        ], 401);
     }
      
     /**

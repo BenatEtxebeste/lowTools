@@ -3,10 +3,10 @@ function SignIn(event) {
     event.preventDefault()
 
     const datos = {
-        name: document.getElementById('inputNombre').value,
-        email: document.getElementById('inputEmail').value,
-        password: document.getElementById('inputContrasena').value,
-        c_password: document.getElementById('inputConfContrasena').value
+        name: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        c_password: document.getElementById('c_password').value
     }
 
     let config = {
@@ -19,12 +19,12 @@ function SignIn(event) {
 
     fetch("http://"+ip+":8085/api/register", config)
         .then(response => {
-            if (!response.ok) {
-                throw new Error("La solicitud no se pudo completar correctamente.");
-            }
+            console.log(response)
+            console.log("entra");
             return response.json();
         })
         .then(data => {
+            console.log(data);
             window.location.assign("index.html")
         })
         .catch(error => console.log(error))
@@ -34,8 +34,8 @@ function LogIn(event) {
     event.preventDefault();
 
     const datos = {
-        name: document.getElementById('inputNombre').value,
-        password: document.getElementById('inputContrasena').value
+        name: document.getElementById('username').value,
+        password: document.getElementById('password').value
     };
 
     let config = {
@@ -53,10 +53,17 @@ function LogIn(event) {
             return response.json();
         })
         .then(data => {
-            localStorage.setItem("token", data["data"]["token"])
-            window.location.assign("home.html")
+            window.location.assign("index.html")
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            Swal.fire({
+                icon: "error",
+                text: 'Datos de inicio de sesión no válidos. Introduzca datos correctos.',
+                customClass: {
+                    confirmButton: 'errorButton'
+                }
+              });
+        })
 }
 
 function LogOut(event) {
