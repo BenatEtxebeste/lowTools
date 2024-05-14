@@ -1,11 +1,13 @@
 #seccion_productos{
     /* height: 100vh; */
+    display: flex;
 }
 
 #categorias_article {
-    width: 25%;
-    padding: 20px;
-    padding-left: 150px;
+    width: 20%;
+    padding: 30px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
     background-color: rgb(255, 243, 226);
     padding-bottom: 200px;
     /* position: fixed; */
@@ -32,6 +34,35 @@
 
 }
 
+#productos_article{
+    width: 80%;
+    /* padding: 20px; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* overflow: unset; */
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+/* #productos_header{
+    width: 100%;
+    height: 250px;
+    background-image: url(../imagenes/productos_header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+} */
+
+#productosContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
 
 /*CIRCULOS*/
 .circulo {
@@ -45,36 +76,49 @@
 /* Cambia los colores como desees */
 .circulo:nth-child(1) {
     background-color: #ff0000;
+    border: 2px solid #222222;
+    cursor: pointer;
 }
 
 /* Rojo */
 .circulo:nth-child(2) {
     background-color: #00ff00;
+    border: 2px solid #222222;
+    cursor: pointer;
+    
 }
 
 /* Verde */
 .circulo:nth-child(3) {
     background-color: #0000ff;
+    border: 2px solid #222222;
+    cursor: pointer;
+
 }
 
 /* Azul */
 .circulo:nth-child(4) {
     background-color: #ffff00;
+    border: 2px solid #222222;
+    cursor: pointer;
+
 }
 
 /* Amarillo */
 .circulo:nth-child(5) {
     background-color: #ff00ff;
+    border: 2px solid #222222;
+    cursor: pointer;
+
 }
 
 /* Magenta */
 .circulo:nth-child(6) {
     background-color: #00ffff;
+    border: 2px solid #222222;
+    cursor: pointer;
+
 }
-
-
-
-
 
 
 /* Estilos básicos para la barra de rango */

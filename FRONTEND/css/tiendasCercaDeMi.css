@@ -1,39 +1,46 @@
-#seccion_map{
+#seccion_map {
     display: flex;
-  flex-direction: column; /* Apila los contenedores hijos verticalmente */
-  align-items: center; /* Centra horizontalmente los contenedores hijos */
-  height: 800px; /* Altura opcional */
-  border: 2px solid black; /* Borde para visualización */
+    flex-direction: column;
+    /* Apila los contenedores hijos verticalmente */
+    align-items: center;
+    /* Centra horizontalmente los contenedores hijos */
+    height: 800px;
+    /* Altura opcional */
+    border: 2px solid black;
+    /* Borde para visualización */
 
 }
+
 /* Estilo para el contenedor del mapa */
 #map {
-    position: relative;
-    height: 600px;
-    width: 80%;
-    background-color: rgb(163, 217, 238);
-    top: 30px;
+    /* position: relative; */
+    height: 700px;
+    /* width: 80%; */
+    /* background-color: rgb(163, 217, 238); */
+    /* top: 30px; */
+    margin-bottom: 260px;
 }
- /* Estilo para el contenedor del buscador */
- .search-container {
-    background-color: #FF8C00 ;
-    width: 300px;
+
+/* Estilo para el contenedor del buscador */
+.search-container {
+    /* background-color: #FF8C00; */
+    width: 100%;
     margin: 20px auto;
-    display: flex; 
-    border-radius: 20px;
-    overflow: hidden; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para el campo de búsqueda */
 .search-input {
-    flex: 1; 
+    flex: 1;
     padding: 10px;
     border: none;
-    border-radius: 20px 0 0 20px; 
+    /* border-radius: 20px 0 0 20px; */
     outline: none;
-    background-color: #FFA500; 
-    color: #fff;
+    /* background-color: #FFA500; */
+    color: #222222;
     font-size: 16px;
     box-sizing: border-box;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -41,24 +48,29 @@
 
 /* Estilo para el botón de búsqueda */
 .search-button {
-    background-color: #FF8C00; 
-    color: #fff;
+    background-color: #FF8C00;
+    color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 0 20px 20px 0; 
+    padding: 20px;
+    font-family: Montserrat Medium;
+    font-size: 16px !important;
+    /* border-radius: 0 20px 20px 0; */
     cursor: pointer;
     font-size: 12px;
     transition: background-color 0.3s ease;
-    border: 2px solid #FF8C00;
-    background-image: linear-gradient(to bottom, #FF8C00, #FF4500);
+    /* border: 2px solid #FF8C00; */
+    background-color: #5E17EB;
+    /* background-image: linear-gradient(to bottom, #FF8C00, #FF4500); */
 }
 
 /* Estilo para el botón cuando se pasa el ratón por encima */
 .search-button:hover {
-    background-color: #FF4500; /* Naranja rojizo */
+    /* background-color: #FF4500; */
+    /* Naranja rojizo */
 }
 
 /* Estilo para el botón cuando se hace clic */
 .search-button:active {
-    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    /* transform: scale(0.95); */
+    /* Reduce ligeramente el tamaño */
 }
